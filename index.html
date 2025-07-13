@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorteo de Amigo Secreto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Sorteo de Amigo Secreto</h1>
+
+  <!-- Sección de registro -->
+  <section id="registroSeccion">
+    <h2>Agregar Participantes</h2>
+    <input type="text" id="nombreInput" placeholder="Nombre">
+    <input type="password" id="pinInput" placeholder="PIN (4 dígitos)">
+    <button id="agregarBtn">Agregar</button>
+    <ul id="listaParticipantes"></ul>
+    <button id="sortearBtn" disabled>Realizar Sorteo</button>
+  </section>
+
+  <!-- Sección de consulta individual -->
+  <section id="consultaSeccion" style="display: none;">
+    <h2>Consulta tu Amigo Secreto</h2>
+    <input type="text" id="consultaNombre" placeholder="Tu nombre">
+    <input type="password" id="consultaPin" placeholder="Tu PIN">
+    <button id="consultarBtn">Consultar</button>
+    <p id="resultadoConsulta"></p>
+    <button id="borrarBtn" style="display: none;">Borrar resultado</button>
+  </section>
+
+  <!-- Sección de acciones globales -->
+  <section id="accionesGlobales" style="display: none;">
+    <button id="reiniciarBtn">🔄 Reiniciar</button>
+    <button id="adminBtn">🔐 Modo Admin</button>
+  </section>
+
+  <!-- Sección de administración -->
+  <section id="adminSeccion" style="display: none;">
+    <h2>Lista completa de asignaciones</h2>
+    <ul id="listaAsignaciones"></ul>
+    <button id="cerrarAdminBtn">Cerrar</button>
+  </section>
+
+  <!-- MODAL DE MENSAJE -->
+  <div id="modalMensaje" class="modal" style="display: none;">
+    <div class="modal-contenido">
+      <p id="modalTexto"></p>
+      <div class="modal-botones">
+        <button id="modalAceptar">Aceptar</button>
+        <button id="modalCancelar">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE ENTRADA -->
+  <div id="modalEntrada" class="modal" style="display: none;">
+    <div class="modal-contenido">
+      <p id="modalEntradaTexto"></p>
+      <input type="text" id="modalEntradaInput" placeholder="Escribe aquí...">
+      <div class="modal-botones">
+        <button id="modalEntradaAceptar">Aceptar</button>
+        <button id="modalEntradaCancelar">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
